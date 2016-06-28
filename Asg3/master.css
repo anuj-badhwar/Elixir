@@ -4,6 +4,10 @@ body{
   background-repeat: repeat;
 }
 
+*{
+  color:#696969;
+}
+
 nav{
   display: inline-block;
   position: absolute;
@@ -19,14 +23,14 @@ nav{
 
 #logo{
 position: absolute;
-  left: 20px;
+  left: 7.5%;
   top:25%;
   bottom: 25%;
   width: 40%;
 }
 
 a:link{
-  color: #696969;
+
   text-decoration: none;
 }
 
@@ -37,15 +41,51 @@ a:link{
   top:25%;
 
   bottom: 25%;
-  right:25px;
+  right:5.5%;
 }
 
 .about_navbar{
   width: auto;
-
   padding: 10px;
 }
 
 nav div{
   display: inline-block;
+}
+
+.outersection{
+  width: 80.4%;
+  position: absolute;
+  top:83px;
+  left: 10%;
+  height: 1000px;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.section1{
+  position: absolute;
+  padding: 1px;
+  left: 7.5%;
+  right:7.5%;
+  width: auto;
+  opacity: 1.0;
+}
+
+.section1 .social{
+  display: inline-block;
+  position: absolute;
+  top: 72px;
+  right:0;
+}
+
+.divider{
+
+  position: absolute;
+  width: 60%;
+  left:20%;
+  right:20%;
+
+  background-image: url("images/divider.png");
+  background-repeat: repeat-x;
 }
