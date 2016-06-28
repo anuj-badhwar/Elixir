@@ -1,0 +1,51 @@
+body{
+  padding:1px;
+  background-image: url("images/page-bg.jpg");
+  background-repeat: repeat;
+}
+
+nav{
+  display: inline-block;
+  position: absolute;
+  left: 10%;
+
+  padding: 2px;
+  background-color: black;
+  opacity:0.5;
+  width: 80%;
+  height:70px;
+
+}
+
+#logo{
+position: absolute;
+  left: 20px;
+  top:25%;
+  bottom: 25%;
+  width: 40%;
+}
+
+a:link{
+  color: #696969;
+  text-decoration: none;
+}
+
+#navbar{
+  position: absolute;
+  height: inherit;
+
+  top:25%;
+
+  bottom: 25%;
+  right:25px;
+}
+
+.about_navbar{
+  width: auto;
+
+  padding: 10px;
+}
+
+nav div{
+  display: inline-block;
+}
