@@ -148,9 +148,47 @@ nav div{
 }
 
 .square{
+  width: 250px;
+  height: 250px;
+  border-radius: 6px;
+  border: 8px solid lightblue;
 
+
+  display: inline-block;
+  background-size: contain;
+}
+
+#W1{
+    background-image: url("images/port1.jpg");
+}
+
+#W2{
+  background-image: url("images/port2.jpg");
+}
+
+#W3{
+  background-image: url("images/port3.jpg");
 }
 
 #Works{
+  display: inline-flex;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  width: 85%;
+  height: 40%;
+  position: absolute;
+  left: 7.5%;
+  top: 620px;
+}
 
+.divider3{
+  background-image: url("images/divider.png");
+  height: 8px;
+  width:85%;
+  position: absolute;
+  left: 7.5%;
+  top: 950px;
+  background-repeat: repeat-x;
 }
