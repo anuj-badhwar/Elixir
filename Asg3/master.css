@@ -110,6 +110,7 @@ nav div{
 }
 
 #Photo{
+  opacity: 1;
   display: inline-block;
   position: relative;
   width: 40%;
@@ -117,6 +118,7 @@ nav div{
   width: 35%;
   height: 220px;
   background-color: white;
+
 }
 
 .divider1{
@@ -192,3 +194,25 @@ nav div{
   top: 950px;
   background-repeat: repeat-x;
 }
+
+/*
+.info_bar{
+  padding: 15px;
+  box-sizing: border-box;
+  width: 60%;
+  top:-20px;
+  height:100px;
+  position: relative;
+  float: right;
+  background-color: blue;
+}
+
+.circle{
+  display: inline;
+  position: absolute;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: lightblue;
+}*/
