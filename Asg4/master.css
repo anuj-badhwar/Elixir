@@ -6,6 +6,14 @@ body{
   color:#2D2D2D;
 }
 
+.TOP{
+  height: 20px;
+  width: 100%;
+  position: absolute;
+  background-image: url("rag.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
 
 #leftbar{
   width: 30%;
@@ -84,17 +92,16 @@ a:hover{
 }
 
 .photo{
-  background-color: blue;
-  border: 10px solid #E7E7E7;
-  border-radius: 18px;
-  width:110px;
-  height: 120px;
+  border: 15px solid #E7E7E7;
+  border-radius: 22px;
+  width:120px;
+  height: 130px;
   flex-grow: 0 ;
   flex-shrink: 0;
-  padding: 10px;
   box-sizing: border-box;
 
   position: relative;
+
 }
 
 .photo:nth-child(1){
@@ -125,4 +132,19 @@ a:hover{
 .photo:nth-child(6){
   background-image: url("pic6.jpg");
   background-size: cover;
+}
+
+.Caption{
+  width: 110%;
+  height:20px;
+  position: absolute;
+  z-index: 2;
+  left: -7px;
+  top: 100px;
+  text-align: center;
+}
+
+.Caption a{
+  color:  #A43030;
+  font-weight: bold;
 }
