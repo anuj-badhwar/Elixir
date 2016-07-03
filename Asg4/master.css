@@ -1,6 +1,6 @@
 body{
   padding: 0.1px;
-  padding-right: 8%;
+  padding-right: 3%;
   background-color: #E7E7E7;
   font-family: serif;
   color:#2D2D2D;
@@ -147,4 +147,42 @@ a:hover{
 .Caption a{
   color:  #A43030;
   font-weight: bold;
+}
+
+.Pseudo{
+  height: 80px;
+  width: 40%;
+  position: relative;
+
+  padding: auto;
+  background-size: contain;
+  display: none;
+  background-repeat: no-repeat;
+background-image: url("logo1.png");
+left: 35%;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px) {
+  nav{
+    flex-direction: column;
+    width: 30%;
+    position: absolute;
+    top: 200px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .Pseudo{
+    display: block;
+  }
+
+  #leftbar{
+    display: none;
+  }
+
+  #rightbar{
+    margin-left:100px;
+    width: 100%;
+  }
 }
