@@ -1,0 +1,41 @@
+body{
+    background-image: url("wood_pattern.png");
+    padding: 200px 400px 0 ;
+}
+
+.Buttons{
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1px;
+}
+
+#screen{
+  width:93%;
+  height: 50px;
+  background-color: lightgray;
+  margin: 5px;
+  margin-left: 0px;
+  font-weight: bold;
+  font-size: 25px;
+
+  padding: 10px;
+  text-align: right;
+}
+
+/*  .Buttons:active{
+  background-color: black;
+}*/
+
+.Buttons:hover{
+background-color: lightgray;
+}
+
+#Calculator{
+  width: 425px;
+  padding: 10px;
+  background-color: lightblue   ;
+  box-shadow: 5px 5px 10px black;
+
+}
