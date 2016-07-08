@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TODO List</title>
+  </head>
+
+  <style media="screen">
+
+    body{
+      padding:50px;
+    }
+
+    #outer{
+      width: 60%;
+      background-color: lightgray;
+      padding: 10px;
+      height: 500px;
+      box-shadow: 5px 5px 15px;
+    }
+
+    #Txt{
+      width: 90%;
+    }
+
+    #Add{
+      position: absolute;
+      top: 70px;
+      border-left: 5px;
+    }
+
+    #inner{
+      width: 99%;
+      background-color: orange;
+      height:435px;
+      border-radius: 10px;
+    }
+
+  </style>
+
+  <body>
+
+      <div id="outer">
+
+          <input type="text" id='Txt' value="" autofocus="true">
+
+          <button type="button" id="Add" onclick="addTodo()">ADD</button>
+
+          <div id="inner">
+
+            <ul id="myUl">
+            </ul>
+
+          </div>
+
+          <button type="button" onclick="clearToDo()">CLEAR</button>
+
+      </div>
+
+      <script type="text/javascript">
+
+      var todos = [];
+      var temp ;
+      var removed=[];
+
+
+      window.onload = function(){
+
+          //localStorage.clear();
+        var check = localStorage.getItem('todos');
+        if(check!=null)
+          todos = check.split(',');
+
+        showTodos();
+      }
+
+        function addTodo(){
+          var newTodo = document.getElementById('Txt').value;
+
+          todos.push(newTodo);
+          saveTodos();
+          showTodos();
+        }
+
+        function saveTodos(){
+          localStorage.setItem('todos',todos);
+        }
+
+        function setStrike(el){
+        el.setAttribute('style','text-decoration : line-through');
+
+        var id_rem =Number(el.getAttribute('id'));
+          removed.push(id_rem);
+        }
+
+        function showTodos(){
+
+          var todosToShow = '';
+          var todoList = localStorage.getItem('todos');
+
+          if(todoList!=null)
+            console.log("NOT NULL IN SHOW")
+          todos=todoList.split(',');
+
+          if(todos.length==1 && todos[0]=="")
+            todos.length=0;
+
+
+            for(var i=0;i<todos.length;i++){
+              todosToShow += '<li onclick="setStrike(this)" id=\"' + i +'\">' + todos[i] + '</li>';
+            }
+
+            document.getElementById('myUl').innerHTML = todosToShow;
+        }
+
+        function clearToDo(){
+          console.log("CLEAR CALLED!");
+
+
+          var toBeRemoved;
+          toBeRemoved = localStorage.getItem('todos');//String
+          toBeRemoved = toBeRemoved.split(','); //Array of Strings
+
+            var Rem_Arr = toBeRemoved;
+
+            removed.sort();
+          for(var i=removed.length-1;i>=0;i--){
+                Rem_Arr.splice(removed[i],1);
+          }
+
+                console.log(Rem_Arr);
+          localStorage.setItem('todos',Rem_Arr);
+          todos = Rem_Arr;
+
+          removed=[];
+          showTodos();
+        }
+      </script>
+  </body>
+</html>
